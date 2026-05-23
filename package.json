@@ -5,7 +5,7 @@
   "private": false,
   "license": "MIT",
   "packageManager": "pnpm@11.2.2",
-  "homepage": "https://github.com/aliciaww/jelly-ui#readme",
+  "homepage": "https://jelly-web-elements.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/aliciaww/jelly-ui.git"

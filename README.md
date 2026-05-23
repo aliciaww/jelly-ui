@@ -2,6 +2,8 @@
 
 a copy-paste set of react/tailwind components. the demo is a next.js app, but the components are plain tsx and tailwind classes, so they can be used in next.js or vite projects.
 
+live demo: https://jelly-web-elements.vercel.app
+
 ## what is included
 
 - `JellyButton`
