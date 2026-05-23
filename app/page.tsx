@@ -339,6 +339,10 @@ export default function JellyShowcase() {
             readme
           </a>
           <span aria-hidden>|</span>
+          <a href="https://github.com/aliciaww/jelly-ui" className="hover:text-foreground transition-colors">
+            github
+          </a>
+          <span aria-hidden>|</span>
           <a href="/license" className="hover:text-foreground transition-colors">
             mit license
           </a>
