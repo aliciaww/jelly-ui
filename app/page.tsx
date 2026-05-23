@@ -156,7 +156,7 @@ export default function JellyShowcase() {
             jelly ui
           </h1>
           <p className="mx-auto max-w-3xl text-muted-foreground font-medium text-base">
-            a copy-paste set of react/tailwind components.
+            a copy-paste set of react/tailwind components
           </p>
         </header>
 
@@ -331,7 +331,7 @@ export default function JellyShowcase() {
         <footer className="flex flex-wrap items-center justify-center gap-2 text-center text-muted-foreground text-sm font-medium pb-4">
           <span>made by alicia</span>
           <span aria-hidden>|</span>
-          <a href="/jelly-ui.tar" className="hover:text-foreground transition-colors">
+          <a href="https://github.com/aliciaww/jelly-ui/archive/refs/heads/main.zip" className="hover:text-foreground transition-colors">
             download
           </a>
           <span aria-hidden>|</span>

@@ -37,8 +37,8 @@ export default function LicensePage() {
         </article>
 
         <footer className="text-center text-sm font-medium text-muted-foreground">
-          <Link href="/" className="hover:text-foreground transition-colors">
-            back to jelly ui
+          <Link href="/" aria-label="back to jelly ui" className="text-2xl leading-none hover:text-foreground transition-colors">
+            ←
           </Link>
         </footer>
       </div>
