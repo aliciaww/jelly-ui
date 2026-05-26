@@ -1,4 +1,25 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "MIT License",
+  description: "Jelly UI is available under the MIT License for use, modification, and distribution.",
+  alternates: {
+    canonical: "/license",
+  },
+  openGraph: {
+    type: "website",
+    url: "/license",
+    title: "MIT License | Jelly UI",
+    description: "Jelly UI is available under the MIT License for use, modification, and distribution.",
+    siteName: "Jelly UI",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MIT License | Jelly UI",
+    description: "Jelly UI is available under the MIT License for use, modification, and distribution.",
+  },
+}
 
 const licenseParagraphs = [
   "Copyright 2025 Alicia Wong",

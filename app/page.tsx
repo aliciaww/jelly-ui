@@ -156,12 +156,30 @@ export default function JellyShowcase() {
             jelly ui
           </h1>
           <p className="mx-auto max-w-3xl text-muted-foreground font-medium text-base">
-            a copy-paste set of react/tailwind components
+            squishy copy-paste components for react and tailwind css.
           </p>
+          <nav aria-label="intro links" className="flex flex-wrap items-center justify-center gap-3 pt-3">
+            <a href="#components" className="rounded-full bg-[var(--jelly-pink)] px-5 py-2.5 text-sm font-bold text-foreground shadow-sm transition hover:brightness-105">
+              browse components
+            </a>
+            <a href="/readme" className="rounded-full border border-border bg-white/55 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white/80">
+              getting started
+            </a>
+            <a href="https://github.com/aliciaww/jelly-ui" className="rounded-full border border-border bg-white/55 px-5 py-2.5 text-sm font-bold text-foreground transition hover:bg-white/80">
+              github
+            </a>
+          </nav>
+          <div className="flex flex-wrap justify-center gap-2 pt-2 text-xs font-bold text-muted-foreground">
+            {["react 19", "tailwind css 4", "typescript"].map((technology) => (
+              <span key={technology} className="rounded-full bg-white/50 px-3 py-1.5 ring-1 ring-border/70">
+                {technology}
+              </span>
+            ))}
+          </div>
         </header>
 
         {/* 2-column grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div id="components" className="grid scroll-mt-8 grid-cols-1 gap-8 lg:grid-cols-2">
 
           {/* buttons */}
           <Section title="buttons" onCopy={() => copyCode("JellyButton")} copyStatus={copyState?.component === "JellyButton" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyButton" ? manualCopy.code : undefined}>

@@ -1,6 +1,27 @@
 import { readFile } from "fs/promises"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { join } from "path"
+
+export const metadata: Metadata = {
+  title: "Getting Started",
+  description: "Installation notes and usage guidance for Jelly UI React and Tailwind CSS components.",
+  alternates: {
+    canonical: "/readme",
+  },
+  openGraph: {
+    type: "website",
+    url: "/readme",
+    title: "Getting Started | Jelly UI",
+    description: "Installation notes and usage guidance for Jelly UI React and Tailwind CSS components.",
+    siteName: "Jelly UI",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Getting Started | Jelly UI",
+    description: "Installation notes and usage guidance for Jelly UI React and Tailwind CSS components.",
+  },
+}
 
 function parseInline(text: string) {
   return text.replaceAll("`", "")
