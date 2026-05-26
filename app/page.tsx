@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, type ReactNode } from "react"
+import Link from "next/link"
 import { JellyButton } from "@/components/jelly/jelly-button"
 import { JellyBadge } from "@/components/jelly/jelly-badge"
 import { JellyCard, JellyCardTitle, JellyCardDescription } from "@/components/jelly/jelly-card"
@@ -171,7 +172,7 @@ export default function JellyShowcase() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 
           {/* buttons */}
-          <Section title="buttons" onCopy={() => copyCode("JellyButton")} copyStatus={copyState?.component === "JellyButton" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyButton" ? manualCopy.code : undefined}>
+          <Section title="buttons" href="/components/button" onCopy={() => copyCode("JellyButton")} copyStatus={copyState?.component === "JellyButton" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyButton" ? manualCopy.code : undefined}>
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
                 {COLORS.map((c) => (
@@ -202,7 +203,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* badges */}
-          <Section title="badges" onCopy={() => copyCode("JellyBadge")} copyStatus={copyState?.component === "JellyBadge" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyBadge" ? manualCopy.code : undefined}>
+          <Section title="badges" href="/components/badge" onCopy={() => copyCode("JellyBadge")} copyStatus={copyState?.component === "JellyBadge" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyBadge" ? manualCopy.code : undefined}>
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
                 {COLORS.map((c) => (
@@ -222,7 +223,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* toggles */}
-          <Section title="toggles" onCopy={() => copyCode("JellyToggle")} copyStatus={copyState?.component === "JellyToggle" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyToggle" ? manualCopy.code : undefined}>
+          <Section title="toggles" href="/components/toggle" onCopy={() => copyCode("JellyToggle")} copyStatus={copyState?.component === "JellyToggle" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyToggle" ? manualCopy.code : undefined}>
             <div className="grid grid-cols-2 gap-3">
               {COLORS.map((c) => (
                 <JellyToggle
@@ -237,7 +238,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* sliders */}
-          <Section title="sliders" onCopy={() => copyCode("JellySlider")} copyStatus={copyState?.component === "JellySlider" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellySlider" ? manualCopy.code : undefined}>
+          <Section title="sliders" href="/components/slider" onCopy={() => copyCode("JellySlider")} copyStatus={copyState?.component === "JellySlider" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellySlider" ? manualCopy.code : undefined}>
             <div className="space-y-4">
               {COLORS.slice(0, 4).map((c) => (
                 <JellySlider
@@ -252,7 +253,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* progress */}
-          <Section title="progress" onCopy={() => copyCode("JellyProgress")} copyStatus={copyState?.component === "JellyProgress" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyProgress" ? manualCopy.code : undefined}>
+          <Section title="progress" href="/components/progress" onCopy={() => copyCode("JellyProgress")} copyStatus={copyState?.component === "JellyProgress" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyProgress" ? manualCopy.code : undefined}>
             <div className="space-y-3">
               {COLORS.map((c, i) => (
                 <JellyProgress
@@ -266,7 +267,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* chips */}
-          <Section title="chips" onCopy={() => copyCode("JellyChip")} copyStatus={copyState?.component === "JellyChip" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyChip" ? manualCopy.code : undefined}>
+          <Section title="chips" href="/components/chip" onCopy={() => copyCode("JellyChip")} copyStatus={copyState?.component === "JellyChip" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyChip" ? manualCopy.code : undefined}>
             <div className="space-y-3">
               <p className="text-xs font-medium text-muted-foreground">removable</p>
               <div className="flex flex-wrap gap-2 items-center">
@@ -306,7 +307,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* inputs */}
-          <Section title="inputs" onCopy={() => copyCode("JellyInput")} copyStatus={copyState?.component === "JellyInput" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyInput" ? manualCopy.code : undefined}>
+          <Section title="inputs" href="/components/input" onCopy={() => copyCode("JellyInput")} copyStatus={copyState?.component === "JellyInput" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyInput" ? manualCopy.code : undefined}>
             <div className="grid grid-cols-2 gap-3">
               <JellyInput color="pink"   label="name"     placeholder="enter your name…" />
               <JellyInput color="blue"   label="email"    placeholder="hello@jelly.ui"   type="email" />
@@ -316,7 +317,7 @@ export default function JellyShowcase() {
           </Section>
 
           {/* cards */}
-          <Section title="cards" onCopy={() => copyCode("JellyCard")} copyStatus={copyState?.component === "JellyCard" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyCard" ? manualCopy.code : undefined}>
+          <Section title="cards" href="/components/card" onCopy={() => copyCode("JellyCard")} copyStatus={copyState?.component === "JellyCard" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyCard" ? manualCopy.code : undefined}>
             <div className="grid grid-cols-2 gap-3">
               {(["pink", "blue", "green", "yellow"] as const).map((c, i) => {
                 const labels = ["strawberry", "blueberry", "lime", "lemon"]
@@ -361,12 +362,14 @@ export default function JellyShowcase() {
 
 function Section({
   title,
+  href,
   children,
   onCopy,
   copyStatus,
   manualCode,
 }: {
   title: string
+  href: string
   children: ReactNode
   onCopy?: () => void
   copyStatus?: "copied" | "manual" | "error"
@@ -386,7 +389,11 @@ function Section({
     <section className="space-y-3">
       <div className="flex items-center gap-2">
         <Star size={14} className="text-muted-foreground" />
-        <h2 className="text-lg font-bold text-foreground">{title}</h2>
+        <h2 className="text-lg font-bold text-foreground">
+          <Link href={href} className="transition-colors hover:text-[oklch(0.52_0.09_240)]">
+            {title}
+          </Link>
+        </h2>
         <div className="flex-1 h-px bg-border/50 ml-2" />
         {onCopy && (
           <button

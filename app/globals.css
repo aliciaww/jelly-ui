@@ -97,6 +97,7 @@
 @theme inline {
   --font-sans: 'Quicksand', sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-code: var(--font-roboto-mono), monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
