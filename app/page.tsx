@@ -168,7 +168,7 @@ export default function JellyShowcase() {
         </header>
 
         {/* 2-column grid */}
-        <div id="components" className="grid scroll-mt-8 grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 
           {/* buttons */}
           <Section title="buttons" onCopy={() => copyCode("JellyButton")} copyStatus={copyState?.component === "JellyButton" ? copyState.status : undefined} manualCode={manualCopy?.component === "JellyButton" ? manualCopy.code : undefined}>
