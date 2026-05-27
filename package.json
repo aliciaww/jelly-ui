@@ -1,7 +1,7 @@
 {
   "name": "jelly-ui",
   "version": "0.1.0",
-  "description": "A copy-paste set of react/tailwind components.",
+  "description": "Cute kawaii-style TypeScript React and Tailwind CSS components, including squishy web buttons.",
   "private": false,
   "license": "MIT",
   "packageManager": "pnpm@11.2.2",

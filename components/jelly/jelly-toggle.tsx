@@ -53,6 +53,7 @@ export function JellyToggle({
       )}
     >
       <button
+        type="button"
         role="switch"
         aria-checked={checked}
         aria-label={label}

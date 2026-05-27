@@ -47,7 +47,7 @@ export function JellyBadge({
       />
       {pulse && (
         <span className="relative flex h-2 w-2 shrink-0">
-          <span className={cn("animate-ping absolute inline-flex h-full w-full rounded-full opacity-50", c.dot)} />
+          <span className={cn("animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full opacity-50", c.dot)} />
           <span className={cn("relative inline-flex rounded-full h-2 w-2", c.dot)} />
         </span>
       )}

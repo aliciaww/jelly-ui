@@ -40,9 +40,11 @@ export function JellyProgress({
   showPercent = true,
   animated = false,
   className,
+  "aria-label": ariaLabel,
   ...props
 }: JellyProgressProps) {
-  const pct = Math.min(100, Math.max(0, (value / max) * 100))
+  const boundedValue = Math.min(max, Math.max(0, value))
+  const pct = max > 0 ? (boundedValue / max) * 100 : 0
 
   return (
     <div {...props} className={cn("flex flex-col gap-1.5", className)}>
@@ -56,7 +58,8 @@ export function JellyProgress({
       )}
       <div
         role="progressbar"
-        aria-valuenow={value}
+        aria-label={ariaLabel ?? label ?? `${color} progress`}
+        aria-valuenow={boundedValue}
         aria-valuemin={0}
         aria-valuemax={max}
         className={cn("relative h-4 w-full rounded-full overflow-hidden border border-white/30", trackMap[color])}

@@ -4,7 +4,7 @@ import './globals.css'
 
 const siteUrl = 'https://jelly-web-elements.vercel.app'
 const description =
-  'Squishy copy-paste React and Tailwind CSS components with playful jelly interactions.'
+  'Cute kawaii-style web buttons and squishy copy-paste components for React, TypeScript, and Tailwind CSS apps.'
 
 const quicksand = Quicksand({
   subsets: ['latin'],
@@ -15,7 +15,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Jelly UI | Squishy React and Tailwind Components',
+    default: 'Jelly UI | Cute Kawaii Web Buttons for TypeScript',
     template: '%s | Jelly UI',
   },
   description,
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   keywords: [
     'React components',
     'Tailwind CSS components',
+    'TypeScript components',
+    'cute web buttons',
+    'kawaii buttons',
+    'React button component',
     'copy-paste UI',
     'component library',
     'Jelly UI',
@@ -34,18 +38,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'Jelly UI | Squishy React and Tailwind Components',
+    title: 'Jelly UI | Cute Kawaii Web Buttons for TypeScript',
     description,
     siteName: 'Jelly UI',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jelly UI | Squishy React and Tailwind Components',
+    title: 'Jelly UI | Cute Kawaii Web Buttons for TypeScript',
     description,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
   verification: {
     google: 'nNJZNk0SfTu5Zn4oHJCn6o4hovOxyI5Z8r0-FuNS01k',
@@ -81,6 +92,7 @@ export default function RootLayout({
     codeRepository: 'https://github.com/aliciaww/jelly-ui',
     license: 'https://opensource.org/licenses/MIT',
     programmingLanguage: ['TypeScript', 'CSS'],
+    keywords: 'cute kawaii web buttons, React components, TypeScript components, Tailwind CSS',
     author: {
       '@type': 'Person',
       name: 'Alicia Wong',

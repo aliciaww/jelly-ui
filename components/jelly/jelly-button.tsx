@@ -52,6 +52,7 @@ export function JellyButton({
   children,
   className,
   disabled,
+  type = "button",
   onClick,
   ...props
 }: JellyButtonProps) {
@@ -69,6 +70,7 @@ export function JellyButton({
     return (
       <button
         {...props}
+        type={type}
         disabled={disabled}
         onClick={handleClick}
         className={cn(
@@ -92,6 +94,7 @@ export function JellyButton({
   return (
     <button
       {...props}
+      type={type}
       disabled={disabled}
       onClick={handleClick}
       className={cn(

@@ -30,7 +30,7 @@ const docs: Record<string, ComponentDoc> = {
   button: {
     name: "Jelly Button",
     title: "jelly button",
-    description: "A squishy React and Tailwind CSS button component with pastel colors, outlined variants, sizes, and jelly click animation.",
+    description: "A cute kawaii-style web button component written in TypeScript for React and Tailwind CSS, with pastel colors, outlined variants, sizes, and a jelly click animation.",
     preview: <ButtonPreview />,
     usageText: <>Copy the component, add the jelly keyframe to the global stylesheet, and render it wherever an HTML button would be used.</>,
     usageCode: `import { JellyButton } from "@/components/jelly/jelly-button"
@@ -231,7 +231,10 @@ export default async function JellyComponentPage({ params }: { params: Promise<{
 
   return (
     <ComponentPage
+      name={doc.name}
+      slug={slug}
       title={doc.title}
+      description={doc.description}
       preview={doc.preview}
       usageText={doc.usageText}
       usageCode={doc.usageCode}

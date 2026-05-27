@@ -21,7 +21,10 @@ export type ComponentProp = {
 }
 
 type ComponentPageProps = {
+  name: string
+  slug: string
   title: string
+  description: string
   preview: ReactNode
   usageText: ReactNode
   usageCode: string
@@ -39,7 +42,9 @@ export function createComponentMetadata({
   slug: string
   description: string
 }): Metadata {
-  const title = `${name} - React and Tailwind CSS Component`
+  const title = name === "Jelly Button"
+    ? "Jelly Button - Cute Kawaii TypeScript React Button"
+    : `${name} - TypeScript React Component`
   const url = `/components/${slug}`
 
   return {
@@ -62,7 +67,10 @@ export function createComponentMetadata({
 }
 
 export function ComponentPage({
+  name,
+  slug,
   title,
+  description,
   preview,
   usageText,
   usageCode,
@@ -70,6 +78,18 @@ export function ComponentPage({
   setupCode,
   props,
 }: ComponentPageProps) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    name,
+    description,
+    url: `https://jelly-web-elements.vercel.app/components/${slug}`,
+    codeRepository: "https://github.com/aliciaww/jelly-ui",
+    license: "https://opensource.org/licenses/MIT",
+    programmingLanguage: "TypeScript",
+    runtimePlatform: "React",
+  }
+
   return (
     <main className={`${codeFont.variable} min-h-screen bg-background px-4 py-12 text-foreground`}>
       <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -142,6 +162,10 @@ export function ComponentPage({
           </Link>
         </footer>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     </main>
   )
 }
@@ -149,7 +173,7 @@ export function ComponentPage({
 function SectionHeader({ title, id }: { title: string; id: string }) {
   return (
     <div className="flex items-center gap-2">
-      <Star size={14} className="text-muted-foreground" />
+      <Star aria-hidden size={14} className="text-muted-foreground" />
       <h2 id={id} className="text-lg font-bold text-foreground">
         {title}
       </h2>

@@ -283,6 +283,7 @@ export default function JellyShowcase() {
                 ))}
                 {chips.length < DEFAULT_CHIPS.length && (
                   <button
+                    type="button"
                     onClick={() => setChips(DEFAULT_CHIPS)}
                     className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
@@ -388,7 +389,7 @@ function Section({
   return (
     <section className="space-y-3">
       <div className="flex items-center gap-2">
-        <Star size={14} className="text-muted-foreground" />
+        <Star aria-hidden size={14} className="text-muted-foreground" />
         <h2 className="text-lg font-bold text-foreground">
           <Link href={href} className="transition-colors hover:text-[oklch(0.52_0.09_240)]">
             {title}
@@ -397,9 +398,11 @@ function Section({
         <div className="flex-1 h-px bg-border/50 ml-2" />
         {onCopy && (
           <button
+            type="button"
             onClick={onCopy}
             className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
             aria-label={`${copyLabel}: ${title}`}
+            aria-live="polite"
           >
             {copyStatus === "copied" ? <Check size={12} /> : <Copy size={12} />}
             {copyLabel}
